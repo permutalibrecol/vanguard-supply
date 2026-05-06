@@ -1,60 +1,141 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vanguard Distribution Supply | ASME Specialist</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
-    <style>body { font-family: 'Inter', sans-serif; }</style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        html { scroll-behavior: smooth; }
+        .hero-gradient { background: linear-gradient(rgba(0,33,71,0.85), rgba(0,33,71,0.85)); }
+        .whatsapp-float {
+            position: fixed;
+            bottom: 40px;
+            right: 20px;
+            background-color: #25d366;
+            color: #FFF;
+            border-radius: 50px;
+            text-align: center;
+            font-size: 30px;
+            box-shadow: 2px 2px 10px rgba(0,0,0,0.5);
+            z-index: 100;
+            width: 60px;
+            height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+        .whatsapp-float:hover { transform: scale(1.1); background-color: #128c7e; }
+    </style>
 </head>
-<body class="bg-gray-50 text-gray-900">
-    <!-- Navegación -->
-    <nav class="bg-[#002147] text-white p-6 shadow-lg sticky top-0 z-50">
-        <div class="max-w-7xl mx-auto flex justify-between items-center">
-            <h1 class="text-2xl font-bold tracking-tighter">VANGUARD</h1>
-            <div class="space-x-6 uppercase text-sm font-semibold">
-                <a href="#home" class="hover:text-blue-300">Home</a>
-                <a href="#parts" class="hover:text-blue-300">ASME Parts</a>
-                <a href="#valves" class="hover:text-blue-300">Valves</a>
-                <a href="#contact" class="hover:text-blue-300">Contact</a>
+<body class="bg-gray-50 font-sans text-gray-900">
+
+    <!-- BOTÓN WHATSAPP FLOTANTE -->
+    <a href="https://api.whatsapp.com/send?phone=18327235258&text=I%20want%20to%20buy%20a%20valve" class="whatsapp-float" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- NAVEGACIÓN RESPONSIVE -->
+    <nav class="bg-white shadow-lg sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 md:px-6 py-4 flex justify-between items-center">
+            <div class="flex items-center space-x-2">
+                <div class="bg-[#002147] text-white p-1.5 rounded font-bold text-xl">V</div>
+                <span class="text-xl md:text-2xl font-black text-[#002147] tracking-tighter uppercase">Vanguard</span>
+            </div>
+            <!-- Menú Desktop -->
+            <div class="hidden md:flex space-x-6 lg:space-x-8 font-bold text-gray-600 text-xs uppercase tracking-widest">
+                <a href="#home" class="hover:text-blue-900 transition">Inicio</a>
+                <a href="#products" class="hover:text-blue-900 transition">Productos</a>
+                <a href="#specs" class="hover:text-blue-900 transition">Normas</a>
+                <a href="#contact" class="text-blue-600 border-b-2 border-blue-600">Ventas</a>
+            </div>
+            <!-- Botón Móvil -->
+            <div class="md:hidden text-[#002147]">
+                <a href="#contact"><i class="fas fa-envelope fa-lg"></i></a>
             </div>
         </div>
     </nav>
 
-    <!-- Hero Section -->
-    <header id="home" class="relative h-[500px] flex items-center justify-center text-white">
-        <img src="https://images.unsplash.com/photo-1581092160562-40aa08e78837?auto=format&fit=crop&q=80&w=1500" class="absolute inset-0 w-full h-full object-cover brightness-50">
-        <div class="relative text-center px-4">
-            <h2 class="text-5xl font-extrabold mb-4">Global Reach. Dependable Supply.</h2>
-            <p class="text-xl text-gray-200 max-w-2xl mx-auto">Specialized providers of ASME pressure parts for industrial boilers and steam systems.</p>
-        </div>
-    </header>
-
-    <!-- Contenido Técnico -->
-    <section id="parts" class="max-w-7xl mx-auto py-20 px-6">
-        <h3 class="text-3xl font-bold border-l-8 border-[#c5a059] pl-4 mb-12 text-[#002147]">ASME CERTIFIED COMPONENTS</h3>
-        <div class="grid md:grid-cols-2 gap-10">
-            <div class="bg-white p-8 rounded-xl shadow-md border border-gray-100">
-                <h4 class="text-xl font-bold mb-4 text-[#002147]">Boiler Tubes</h4>
-                <p class="text-gray-600">Seamless carbon steel materials: <strong>SA-178, SA-192, SA-210</strong>. Engineered for maximum heat transfer in high-pressure environments.</p>
-            </div>
-            <div class="bg-white p-8 rounded-xl shadow-md border border-gray-100">
-                <h4 class="text-xl font-bold mb-4 text-[#002147]">Pressure Vessels</h4>
-                <p class="text-gray-600">Custom fabricated Drums and Headers designed for extreme thermal cycles under ASME Section I & VIII standards.</p>
+    <!-- HERO SECTION (RESPONSIVE) -->
+    <section id="home" class="relative min-h-[80vh] flex items-center justify-center text-white overflow-hidden">
+        <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?q=80&w=2070" class="absolute inset-0 w-full h-full object-cover shadow-2xl">
+        <div class="absolute inset-0 hero-gradient"></div>
+        <div class="relative text-center px-6 max-w-4xl mx-auto">
+            <h1 class="text-4xl md:text-7xl font-extrabold mb-4 leading-tight uppercase tracking-tighter">Suministros de Alta Presión</h1>
+            <p class="text-lg md:text-2xl mb-8 text-gray-300 font-light italic">Especialistas en componentes certificados ASME para la industria de vapor.</p>
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <a href="https://api.whatsapp.com/send?phone=18327235258&text=I%20want%20to%20buy%20a%20valve" class="bg-green-600 hover:bg-green-700 px-8 py-4 rounded-full font-bold text-lg shadow-lg flex items-center justify-center">
+                    <i class="fab fa-whatsapp mr-2"></i> WhatsApp Ventas
+                </a>
+                <a href="#products" class="bg-white/10 hover:bg-white/20 backdrop-blur-md border border-white/30 px-8 py-4 rounded-full font-bold text-lg transition">Catálogo</a>
             </div>
         </div>
     </section>
 
-    <!-- Contacto -->
-    <section id="contact" class="bg-[#002147] text-white py-20 text-center">
-        <h3 class="text-3xl font-bold mb-6">Industrial Support 24/7</h3>
-        <p class="text-xl mb-8">Ready for your next maintenance window or emergency repair.</p>
-        <a href="mailto:sales@vanguardsupply.com" class="bg-[#c5a059] text-white px-10 py-4 rounded-full font-bold hover:bg-yellow-600 transition">Email: sales@vanguardsupply.com</a>
+    <!-- PRODUCTOS (GRID RESPONSIVO) -->
+    <section id="products" class="max-w-7xl mx-auto py-16 md:py-24 px-6">
+        <div class="text-center mb-16">
+            <h2 class="text-3xl md:text-5xl font-black text-[#002147] uppercase">Equipamiento Industrial</h2>
+            <div class="h-1.5 w-24 bg-blue-600 mx-auto mt-4 rounded-full"></div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+            <div class="bg-white rounded-2xl overflow-hidden shadow-xl border border-gray-100">
+                <img src="https://images.unsplash.com/photo-1628154544710-85f2066f1e8e?q=80&w=1974" class="h-64 w-full object-cover">
+                <div class="p-8 text-center">
+                    <h3 class="font-bold text-xl mb-3 text-[#002147]">Tubos de Caldera</h3>
+                    <p class="text-gray-500 text-sm leading-relaxed mb-4">Normas SA-178, SA-192, SA-210. Disponibilidad inmediata para reparaciones de emergencia.</p>
+                </div>
+            </div>
+            <div class="bg-white rounded-2xl overflow-hidden shadow-xl border border-gray-100">
+                <img src="https://images.unsplash.com/photo-1590856029826-c7a73142bbf1?q=80&w=2073" class="h-64 w-full object-cover">
+                <div class="p-8 text-center">
+                    <h3 class="font-bold text-xl mb-3 text-[#002147]">Válvulas de Seguridad</h3>
+                    <p class="text-gray-500 text-sm leading-relaxed mb-4">Control de presión crítico, válvulas de alivio y trampas de vapor certificadas.</p>
+                </div>
+            </div>
+            <div class="bg-white rounded-2xl overflow-hidden shadow-xl border border-gray-100">
+                <img src="https://images.unsplash.com/photo-1530124560676-586cad3ad25e?q=80&w=2070" class="h-64 w-full object-cover">
+                <div class="p-8 text-center">
+                    <h3 class="font-bold text-xl mb-3 text-[#002147]">Brida y Accesorios</h3>
+                    <p class="text-gray-500 text-sm leading-relaxed mb-4">Accesorios forjados y bridas de alta presión bajo estándares ASME B16.5.</p>
+                </div>
+            </div>
+        </div>
     </section>
 
-    <footer class="py-10 text-center text-gray-500 text-sm">
-        &copy; 2026 Vanguard Distribution Supply. All rights reserved.
+    <!-- SECCIÓN DE CONTACTO -->
+    <footer id="contact" class="bg-[#002147] text-white py-20 px-6">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+            <div>
+                <h2 class="text-4xl font-black mb-6 italic uppercase tracking-tighter">Vanguard Distribution Supply</h2>
+                <p class="text-blue-200 text-lg mb-10 leading-relaxed">Su socio estratégico en la cadena de suministro industrial. Soporte técnico y logístico 24/7 para paradas de planta.</p>
+                <div class="space-y-6">
+                    <div class="flex items-center space-x-4">
+                        <div class="bg-blue-800 p-3 rounded-full"><i class="fas fa-envelope"></i></div>
+                        <span class="text-xl font-bold">sales@dsvanguard.com</span>
+                    </div>
+                    <div class="flex items-center space-x-4">
+                        <div class="bg-green-800 p-3 rounded-full"><i class="fab fa-whatsapp"></i></div>
+                        <span class="text-xl font-bold">+1 832 723 5258</span>
+                    </div>
+                </div>
+            </div>
+            <div class="bg-white/5 p-10 rounded-3xl border border-white/10 text-center">
+                <h3 class="text-2xl font-bold mb-4 italic">Solicitud de Cotización</h3>
+                <p class="text-gray-400 mb-8">Atención prioritaria para requerimientos técnicos de ingeniería.</p>
+                <a href="mailto:sales@dsvanguard.com" class="block bg-white text-[#002147] py-4 rounded-xl font-black text-lg hover:bg-blue-50 transition shadow-2xl">
+                    ENVIAR CORREO AHORA
+                </a>
+            </div>
+        </div>
+        <div class="mt-20 pt-8 border-t border-white/5 text-center text-gray-500 text-xs">
+            &copy; 2026 VANGUARD DISTRIBUTION SUPPLY. ALL RIGHTS RESERVED.
+        </div>
     </footer>
+
 </body>
 </html>
