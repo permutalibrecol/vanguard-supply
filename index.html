@@ -1,171 +1,824 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vanguard Distribution Supply | ASME Specialist Tacoma</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>ASME Boiler Tubes, Industrial Valves & Pressure Parts | Vanguard Supply USA</title>
+
+    <meta name="description"
+        content="Supplier of ASME boiler tubes, industrial valves, pressure vessel components, and industrial logistics solutions worldwide. Fast RFQ response.">
+
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&family=Oswald:wght@500;700&display=swap"
+        rel="stylesheet">
+
     <style>
-        html { scroll-behavior: smooth; }
-        .hero-gradient { background: linear-gradient(rgba(0,33,71,0.88), rgba(0,33,71,0.88)); }
-        .whatsapp-float {
-            position: fixed; bottom: 30px; right: 20px; background-color: #25d366;
-            color: #FFF; border-radius: 50px; width: 60px; height: 60px;
-            display: flex; align-items: center; justify-content: center;
-            font-size: 30px; box-shadow: 0 4px 15px rgba(0,0,0,0.3); z-index: 100;
-            transition: all 0.3s ease;
+        :root {
+            --navy: #002147;
+            --blue-accent: #2563eb;
+            --slate: #0f172a;
         }
-        .lang-es { display: none; }
-        .map-container { filter: grayscale(100%) invert(92%) contrast(83%); }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            overflow-x: hidden;
+            background: #ffffff;
+            color: #111827;
+        }
+
+        .oswald {
+            font-family: 'Oswald', sans-serif;
+        }
+
+        .hero-gradient {
+            background:
+                linear-gradient(135deg,
+                    rgba(0, 33, 71, 0.93) 0%,
+                    rgba(0, 33, 71, 0.75) 100%);
+        }
+
+        .product-card {
+            transition: all .4s ease;
+            border: 1px solid rgba(0, 0, 0, 0.05);
+        }
+
+        .product-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.18);
+            border-color: var(--blue-accent);
+        }
+
+        .product-card img {
+            filter: contrast(1.05) saturate(1.1);
+        }
+
+        .whatsapp-float {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 68px;
+            height: 68px;
+            border-radius: 999px;
+            background: #25d366;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 32px;
+            z-index: 999;
+            box-shadow: 0 18px 40px rgba(37, 211, 102, .45);
+            transition: all .35s ease;
+            border: 3px solid white;
+        }
+
+        .whatsapp-float:hover {
+            transform: translateY(-5px) scale(1.08);
+        }
+
+        .lang-es {
+            display: none;
+        }
+
+        .cart-badge {
+            position: absolute;
+            top: -5px;
+            right: -5px;
+            width: 22px;
+            height: 22px;
+            border-radius: 999px;
+            background: #dc2626;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 11px;
+            font-weight: 800;
+            border: 2px solid white;
+        }
+
+        .slogan-text {
+            font-size: .65rem;
+            letter-spacing: .18em;
+            font-weight: 700;
+        }
+
+        .glass {
+            background: rgba(255, 255, 255, .08);
+            backdrop-filter: blur(12px);
+        }
+
+        .section-title {
+            font-size: 3rem;
+            line-height: 1;
+            font-weight: 900;
+        }
+
+        .toast {
+            position: fixed;
+            bottom: 100px;
+            right: 30px;
+            background: var(--navy);
+            color: white;
+            padding: 16px 24px;
+            border-radius: 10px;
+            z-index: 9999;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, .3);
+            animation: fadeIn .3s ease;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(15px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        section {
+            position: relative;
+        }
     </style>
 </head>
-<body class="bg-white font-sans text-gray-900">
+
+<body>
 
     <!-- WHATSAPP -->
-    <a href="https://api.whatsapp.com/send?phone=18327235258&text=I%20want%20to%20buy%20a%20valve" class="whatsapp-float" target="_blank">
+
+    <a href="https://wa.me/18327235258?text=I%20need%20an%20industrial%20quote"
+        target="_blank"
+        class="whatsapp-float">
         <i class="fab fa-whatsapp"></i>
     </a>
 
-    <!-- NAV -->
-    <nav class="bg-white shadow-md sticky top-0 z-50 border-b border-gray-100">
-        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
-            <!-- LOGO VECTORIAL (REEMPLAZA AL BLOB QUE FALLABA) -->
-            <div class="flex items-center space-x-4">
-                <svg width="45" height="45" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" class="drop-shadow-sm">
-                    <rect width="100" height="100" rx="12" fill="#002147"/>
-                    <path d="M25 30L50 75L75 30" stroke="white" stroke-width="14" stroke-linecap="round" stroke-linejoin="round"/>
-                </svg>
-                <div class="flex flex-col">
-                    <span class="text-2xl font-black text-[#002147] leading-none uppercase tracking-tighter">Vanguard</span>
-                    <span class="text-[9px] font-bold text-blue-600 tracking-[0.25em] uppercase">Distribution Supply</span>
-                </div>
+    <!-- TOP BAR -->
+
+    <div class="bg-blue-700 text-white text-center py-2 text-[11px] font-bold tracking-[0.2em] uppercase">
+        24/7 Industrial RFQ Support • Worldwide Shipping • ASME Certified Supply
+    </div>
+
+    <!-- INFO BAR -->
+
+    <div class="bg-slate-100 py-2 border-b border-gray-200">
+        <div class="max-w-7xl mx-auto px-6 flex justify-between items-center text-[10px] uppercase tracking-widest font-bold">
+
+            <div class="hidden lg:flex gap-8 text-gray-500">
+                <span>
+                    <i class="fas fa-envelope text-blue-600 mr-2"></i>
+                    sales@dsvanguard.com
+                </span>
+
+                <span>
+                    <i class="fas fa-globe text-blue-600 mr-2"></i>
+                    Worldwide Logistics Support
+                </span>
             </div>
-            
-            <div class="flex items-center space-x-6">
-                <button onclick="toggleLang()" class="text-[10px] font-bold text-gray-500 hover:text-blue-600 uppercase tracking-widest transition">
-                    <i class="fas fa-globe mr-1"></i> <span id="btnText">Español</span>
-                </button>
-                <a href="#contact" class="hidden sm:block bg-[#002147] text-white px-6 py-2.5 text-[11px] font-bold uppercase tracking-widest rounded-sm hover:bg-blue-900 transition">
-                    Contact Us
-                </a>
-            </div>
+
+            <button onclick="toggleLang()"
+                class="bg-white border border-gray-200 rounded px-3 py-1 text-blue-600 hover:text-slate-900 transition">
+
+                <i class="fas fa-language mr-2"></i>
+                <span id="langBtnText">SE HABLA ESPAÑOL</span>
+
+            </button>
+
         </div>
+    </div>
+
+    <!-- NAV -->
+
+    <nav class="bg-white/95 backdrop-blur sticky top-0 z-50 border-b border-gray-100">
+
+        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+
+            <div class="flex items-center gap-5">
+
+                <img src="logo.png"
+                    alt="Vanguard Supply"
+                    class="h-14 md:h-20 object-contain">
+
+                <div class="hidden sm:block border-l-2 border-blue-600 pl-4">
+
+                    <p class="slogan-text text-slate-900 uppercase">
+                        Global Reach
+                    </p>
+
+                    <p class="slogan-text text-blue-600 uppercase">
+                        Dependable Supply
+                    </p>
+
+                    <p class="slogan-text text-gray-400 uppercase">
+                        Industrial Solutions
+                    </p>
+
+                </div>
+
+            </div>
+
+            <div class="flex items-center gap-6">
+
+                <button onclick="toggleCart()"
+                    class="relative">
+
+                    <i class="fas fa-shopping-basket text-2xl text-slate-900 hover:text-blue-600 transition"></i>
+
+                    <span id="cart-count" class="cart-badge">0</span>
+
+                </button>
+
+                <a href="#inventory"
+                    class="hidden md:block bg-slate-900 hover:bg-blue-700 text-white px-8 py-3 rounded text-xs tracking-[0.2em] font-bold uppercase transition">
+
+                    View Inventory
+
+                </a>
+
+            </div>
+
+        </div>
+
     </nav>
 
-    <!-- HERO SECTION -->
-    <section id="home" class="relative min-h-[65vh] flex items-center justify-center text-white">
-        <img src="https://images.unsplash.com/photo-1516937941344-00b4e0337589?q=80&w=2070" class="absolute inset-0 w-full h-full object-cover">
+    <!-- HERO -->
+
+    <section class="relative h-[88vh] flex items-center justify-center overflow-hidden">
+
+        <img src="https://images.unsplash.com/photo-1565008447742-97f6f38c985c?auto=format&fit=crop&w=2000&q=80"
+            class="absolute inset-0 w-full h-full object-cover">
+
         <div class="absolute inset-0 hero-gradient"></div>
-        <div class="relative text-center px-6 max-w-4xl">
-            <h1 class="text-5xl md:text-7xl font-black mb-6 uppercase tracking-tighter lang-en">Industrial Power & Piping</h1>
-            <h1 class="text-5xl md:text-7xl font-black mb-6 uppercase tracking-tighter lang-es">Potencia y Tubería Industrial</h1>
-            <p class="text-blue-200 tracking-[0.3em] uppercase text-xs md:text-sm mb-10 font-bold">Tacoma, WA | Leading ASME Certified Supplier</p>
-            <div class="flex flex-col sm:flex-row justify-center gap-4">
-                <a href="mailto:sales@dsvanguard.com" class="bg-blue-600 px-10 py-4 font-bold uppercase text-xs tracking-[0.3em] hover:bg-blue-700 transition shadow-xl">Get Quote</a>
-                <a href="#products" class="border border-white/30 px-10 py-4 font-bold uppercase text-xs tracking-[0.3em] hover:bg-white hover:text-[#002147] transition">Our Supply</a>
+
+        <div class="relative z-10 text-center px-6 text-white max-w-5xl">
+
+            <p class="uppercase tracking-[0.4em] text-blue-400 font-bold mb-6 text-sm">
+                Tacoma, WA • ASME Section VIII Div 1
+            </p>
+
+            <h1 class="oswald uppercase font-black leading-none text-6xl md:text-8xl mb-8 lang-en">
+                Industrial <br>
+                <span class="text-blue-500">
+                    Distribution
+                </span>
+            </h1>
+
+            <h1 class="oswald uppercase font-black leading-none text-6xl md:text-8xl mb-8 lang-es">
+                Distribución <br>
+                <span class="text-blue-500">
+                    Industrial
+                </span>
+            </h1>
+
+            <p class="max-w-3xl mx-auto text-lg md:text-2xl text-gray-200 leading-relaxed mb-10 lang-en">
+                Reliable ASME-certified industrial supply solutions for energy,
+                manufacturing, and heavy industry worldwide.
+            </p>
+
+            <p class="max-w-3xl mx-auto text-lg md:text-2xl text-gray-200 leading-relaxed mb-10 lang-es">
+                Soluciones industriales certificadas ASME para energía,
+                manufactura e industria pesada a nivel mundial.
+            </p>
+
+            <div class="flex flex-col md:flex-row gap-5 justify-center">
+
+                <a href="#inventory"
+                    class="bg-blue-600 hover:bg-blue-700 transition px-10 py-5 uppercase tracking-[0.2em] font-bold text-sm">
+
+                    View Products
+
+                </a>
+
+                <a href="https://wa.me/18327235258"
+                    target="_blank"
+                    class="border border-white hover:bg-white hover:text-slate-900 transition px-10 py-5 uppercase tracking-[0.2em] font-bold text-sm">
+
+                    Request Quote
+
+                </a>
+
             </div>
+
         </div>
+
+    </section>
+
+    <!-- TRUST SECTION -->
+
+    <section class="bg-white py-20 border-b">
+
+        <div class="max-w-7xl mx-auto px-6">
+
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-10 text-center">
+
+                <div>
+                    <i class="fas fa-globe text-5xl text-blue-600 mb-5"></i>
+                    <h3 class="font-black oswald text-slate-900 text-xl uppercase">
+                        Global Export
+                    </h3>
+
+                    <p class="text-gray-500 text-sm mt-3">
+                        Worldwide industrial logistics solutions.
+                    </p>
+                </div>
+
+                <div>
+                    <i class="fas fa-shield-alt text-5xl text-blue-600 mb-5"></i>
+                    <h3 class="font-black oswald text-slate-900 text-xl uppercase">
+                        ASME Compliant
+                    </h3>
+
+                    <p class="text-gray-500 text-sm mt-3">
+                        Certified industrial-grade materials.
+                    </p>
+                </div>
+
+                <div>
+                    <i class="fas fa-bolt text-5xl text-blue-600 mb-5"></i>
+                    <h3 class="font-black oswald text-slate-900 text-xl uppercase">
+                        Fast Quotes
+                    </h3>
+
+                    <p class="text-gray-500 text-sm mt-3">
+                        RFQ response within hours.
+                    </p>
+                </div>
+
+                <div>
+                    <i class="fas fa-industry text-5xl text-blue-600 mb-5"></i>
+                    <h3 class="font-black oswald text-slate-900 text-xl uppercase">
+                        Industrial Experts
+                    </h3>
+
+                    <p class="text-gray-500 text-sm mt-3">
+                        Engineering-focused supply chain support.
+                    </p>
+                </div>
+
+            </div>
+
+        </div>
+
     </section>
 
     <!-- PRODUCTS -->
-    <section id="products" class="max-w-7xl mx-auto py-24 px-6">
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-16">
-            <!-- Boiler Tubes -->
-            <div class="group">
-                <div class="overflow-hidden rounded-sm mb-8 shadow-2xl">
-                    <img src="https://static.vecteezy.com/system/resources/thumbnails/037/779/387/small_2x/ai-generated-modern-boiler-room-with-gas-boilers-industrial-heating-photo.jpg" class="w-full h-80 object-cover transform group-hover:scale-105 transition duration-700">
-                </div>
-                <h3 class="font-black text-[#002147] text-xl uppercase tracking-widest mb-3 lang-en">Boiler Systems</h3>
-                <h3 class="font-black text-[#002147] text-xl uppercase tracking-widest mb-3 lang-es">Sistemas de Caldera</h3>
-                <p class="text-gray-500 text-sm leading-relaxed lang-en">Specialized boiler tubes for high-efficiency gas heating and heavy industrial use.</p>
-                <p class="text-gray-500 text-sm leading-relaxed lang-es">Tubos de caldera especializados para calefacción de gas de alta eficiencia y uso industrial pesado.</p>
+
+    <section id="inventory" class="py-24 px-6 bg-slate-50">
+
+        <div class="max-w-7xl mx-auto">
+
+            <div class="text-center mb-20">
+
+                <h2 class="section-title oswald uppercase text-slate-900 lang-en">
+                    Our Products
+                </h2>
+
+                <h2 class="section-title oswald uppercase text-slate-900 lang-es">
+                    Nuestros Productos
+                </h2>
+
+                <div class="w-28 h-1 bg-blue-600 mx-auto mt-6"></div>
+
             </div>
-            <!-- Valves -->
-            <div class="group">
-                <div class="overflow-hidden rounded-sm mb-8 shadow-2xl">
-                    <img src="https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?q=80&w=800" class="w-full h-80 object-cover transform group-hover:scale-105 transition duration-700">
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+
+                <!-- CARD -->
+
+                <div class="product-card bg-white overflow-hidden">
+
+                    <div class="h-72 overflow-hidden">
+
+                        <img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?auto=format&fit=crop&w=1200&q=80"
+                            class="w-full h-full object-cover hover:scale-110 duration-700">
+
+                    </div>
+
+                    <div class="p-8">
+
+                        <h3 class="oswald uppercase text-2xl font-bold text-slate-900 mb-4">
+                            Boiler Tubes
+                        </h3>
+
+                        <p class="text-gray-500 text-sm leading-relaxed mb-8">
+                            SA-178, SA-192 and SA-210 seamless carbon steel tubes for industrial applications.
+                        </p>
+
+                        <button onclick="addToCart('Boiler Tubes')"
+                            class="w-full border-2 border-slate-900 py-4 uppercase text-xs tracking-[0.2em] font-bold hover:bg-slate-900 hover:text-white transition">
+
+                            Add To Quote
+
+                        </button>
+
+                    </div>
+
                 </div>
-                <h3 class="font-black text-[#002147] text-xl uppercase tracking-widest mb-3 lang-en">Control & Relief</h3>
-                <h3 class="font-black text-[#002147] text-xl uppercase tracking-widest mb-3 lang-es">Control y Alivio</h3>
-                <p class="text-gray-500 text-sm leading-relaxed lang-en">ASME-certified relief valves and industrial pressure regulators for maximum safety.</p>
-                <p class="text-gray-500 text-sm leading-relaxed lang-es">Válvulas de alivio certificadas ASME y reguladores de presión industrial para máxima seguridad.</p>
-            </div>
-            <!-- Trim/Pressure -->
-            <div class="group">
-                <div class="overflow-hidden rounded-sm mb-8 shadow-2xl">
-                    <img src="https://csi.imgix.net/photo-gallery/vessel-trim/trim01.jpg?auto=format&domain=csi.imgix.net&fit=clip&ixlib=php-3.3.1&q=60&w=1200&s=2399c44397f556ecda9f9f9461f35985" class="w-full h-80 object-cover transform group-hover:scale-105 transition duration-700">
+
+                <!-- CARD -->
+
+                <div class="product-card bg-white overflow-hidden">
+
+                    <div class="h-72 overflow-hidden">
+
+                        <img src="https://images.unsplash.com/photo-1532619187608-e5375cab36aa?auto=format&fit=crop&w=1200&q=80"
+                            class="w-full h-full object-cover hover:scale-110 duration-700">
+
+                    </div>
+
+                    <div class="p-8">
+
+                        <h3 class="oswald uppercase text-2xl font-bold text-slate-900 mb-4">
+                            Industrial Valves
+                        </h3>
+
+                        <p class="text-gray-500 text-sm leading-relaxed mb-8">
+                            ASME safety relief, gate and globe valves for industrial flow control.
+                        </p>
+
+                        <button onclick="addToCart('Industrial Valves')"
+                            class="w-full border-2 border-slate-900 py-4 uppercase text-xs tracking-[0.2em] font-bold hover:bg-slate-900 hover:text-white transition">
+
+                            Add To Quote
+
+                        </button>
+
+                    </div>
+
                 </div>
-                <h3 class="font-black text-[#002147] text-xl uppercase tracking-widest mb-3 lang-en">Vessel Trim</h3>
-                <h3 class="font-black text-[#002147] text-xl uppercase tracking-widest mb-3 lang-es">Trim de Recipientes</h3>
-                <p class="text-gray-500 text-sm leading-relaxed lang-en">Premium precision trim and pressure vessel components for critical infrastructure.</p>
-                <p class="text-gray-500 text-sm leading-relaxed lang-es">Trim de precisión premium y componentes para recipientes a presión en infraestructuras críticas.</p>
+
+                <!-- CARD -->
+
+                <div class="product-card bg-white overflow-hidden">
+
+                    <div class="h-72 overflow-hidden">
+
+                        <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=1200&q=80"
+                            class="w-full h-full object-cover hover:scale-110 duration-700">
+
+                    </div>
+
+                    <div class="p-8">
+
+                        <h3 class="oswald uppercase text-2xl font-bold text-slate-900 mb-4">
+                            Vessel Trim
+                        </h3>
+
+                        <p class="text-gray-500 text-sm leading-relaxed mb-8">
+                            Precision-engineered internals and pressure vessel components.
+                        </p>
+
+                        <button onclick="addToCart('Vessel Trim')"
+                            class="w-full border-2 border-slate-900 py-4 uppercase text-xs tracking-[0.2em] font-bold hover:bg-slate-900 hover:text-white transition">
+
+                            Add To Quote
+
+                        </button>
+
+                    </div>
+
+                </div>
+
             </div>
+
         </div>
+
     </section>
 
-    <!-- LOCATION SECTION -->
-    <section class="bg-slate-50 py-24 px-6 border-y border-gray-100">
-        <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-            <div>
-                <h2 class="text-sm font-bold text-blue-600 tracking-[0.4em] uppercase mb-4">Strategic Logistics</h2>
-                <h3 class="text-4xl font-black text-[#002147] uppercase mb-8 lang-en">Tacoma Operations Hub</h3>
-                <h3 class="text-4xl font-black text-[#002147] uppercase mb-8 lang-es">Centro Operativo Tacoma</h3>
-                <p class="text-gray-600 mb-10 leading-loose lang-en text-lg">Located in Tacoma, Washington, we leverage the port's logistical advantages to provide rapid response times for plant shutdowns.</p>
-                <p class="text-gray-600 mb-10 leading-loose lang-es text-lg">Ubicados en Tacoma, Washington, aprovechamos las ventajas logísticas del puerto para ofrecer tiempos de respuesta rápidos en paradas de planta.</p>
-                <div class="flex items-center space-x-4 text-[#002147] font-black uppercase text-xs tracking-widest">
-                    <div class="w-10 h-10 bg-blue-600 text-white flex items-center justify-center rounded-full"><i class="fas fa-map-marker-alt"></i></div>
-                    <span>Tacoma, WA 98421, USA</span>
+    <!-- INDUSTRIES -->
+
+    <section class="py-24 bg-white">
+
+        <div class="max-w-7xl mx-auto px-6">
+
+            <div class="text-center mb-16">
+
+                <h2 class="section-title oswald uppercase text-slate-900">
+                    Industries We Serve
+                </h2>
+
+                <div class="w-24 h-1 bg-blue-600 mx-auto mt-5"></div>
+
+            </div>
+
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+
+                <div class="bg-slate-50 border p-10 text-center hover:shadow-xl transition">
+
+                    <i class="fas fa-oil-can text-5xl text-blue-600 mb-5"></i>
+
+                    <h3 class="uppercase font-bold tracking-widest text-sm">
+                        Oil & Gas
+                    </h3>
+
                 </div>
+
+                <div class="bg-slate-50 border p-10 text-center hover:shadow-xl transition">
+
+                    <i class="fas fa-bolt text-5xl text-blue-600 mb-5"></i>
+
+                    <h3 class="uppercase font-bold tracking-widest text-sm">
+                        Power Plants
+                    </h3>
+
+                </div>
+
+                <div class="bg-slate-50 border p-10 text-center hover:shadow-xl transition">
+
+                    <i class="fas fa-industry text-5xl text-blue-600 mb-5"></i>
+
+                    <h3 class="uppercase font-bold tracking-widest text-sm">
+                        Manufacturing
+                    </h3>
+
+                </div>
+
+                <div class="bg-slate-50 border p-10 text-center hover:shadow-xl transition">
+
+                    <i class="fas fa-ship text-5xl text-blue-600 mb-5"></i>
+
+                    <h3 class="uppercase font-bold tracking-widest text-sm">
+                        Marine
+                    </h3>
+
+                </div>
+
             </div>
-            <div class="h-[450px] w-full shadow-[0_20px_50px_rgba(0,33,71,0.2)] rounded-sm overflow-hidden map-container border-4 border-white">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d86419.0142838421!2d-122.5186358!3d47.2528768!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x549054ee2b659567%3A0x62219c07ebb09ad!2sTacoma%2C%20WA!5e0!3m2!1sen!2sus!4v1709700000000!5m2!1sen!2sus" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-            </div>
+
         </div>
+
     </section>
+
+    <!-- CART -->
+
+    <div id="cart-modal"
+        class="fixed inset-0 bg-black/70 z-[1000] hidden justify-end">
+
+        <div class="bg-white w-full max-w-md h-full p-10 flex flex-col shadow-2xl">
+
+            <div class="flex justify-between items-center border-b pb-6 mb-10">
+
+                <h2 class="oswald uppercase text-3xl font-black text-slate-900">
+                    Request Quote
+                </h2>
+
+                <button onclick="toggleCart()">
+                    <i class="fas fa-times text-2xl text-gray-400 hover:text-red-500"></i>
+                </button>
+
+            </div>
+
+            <div id="cart-items"
+                class="flex-grow overflow-y-auto space-y-4">
+
+                <p class="text-gray-400 italic text-center py-10">
+                    Your list is empty.
+                </p>
+
+            </div>
+
+            <button onclick="sendToWhatsApp()"
+                class="bg-[#25d366] hover:opacity-90 text-white py-5 uppercase tracking-[0.2em] text-sm font-bold mt-10">
+
+                Send To WhatsApp
+
+            </button>
+
+        </div>
+
+    </div>
 
     <!-- FOOTER -->
-    <footer id="contact" class="bg-[#002147] text-white py-20 px-6">
-        <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-10">
-            <div class="text-center md:text-left flex items-center space-x-4">
-                <svg width="40" height="40" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <rect width="100" height="100" rx="8" fill="#1e3a8a"/>
-                    <path d="M25 30L50 75L75 30" stroke="white" stroke-width="12" stroke-linejoin="round"/>
-                </svg>
-                <div>
-                    <h2 class="text-xl font-black uppercase tracking-tighter">Vanguard Distribution Supply</h2>
-                    <p class="text-blue-400 text-[9px] font-bold uppercase tracking-[0.3em]">Engineering Excellence Since 2026</p>
+
+    <footer class="bg-slate-900 text-white py-20 px-6">
+
+        <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-16">
+
+            <div>
+
+                <div class="flex items-center gap-4 mb-10">
+
+                    <img src="logo.png"
+                        class="h-14 brightness-0 invert">
+
+                    <span class="oswald uppercase text-3xl font-bold text-blue-500">
+                        Vanguard Supply
+                    </span>
+
                 </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+
+                    <div>
+
+                        <h4 class="uppercase tracking-[0.2em] text-xs font-bold mb-4 text-white">
+                            Location
+                        </h4>
+
+                        <p class="text-gray-400 text-sm leading-relaxed">
+                            Tacoma, Washington <br>
+                            98421, United States
+                        </p>
+
+                    </div>
+
+                    <div>
+
+                        <h4 class="uppercase tracking-[0.2em] text-xs font-bold mb-4 text-white">
+                            Contact
+                        </h4>
+
+                        <p class="text-gray-400 text-sm">
+                            sales@dsvanguard.com
+                        </p>
+
+                        <p class="text-gray-400 text-sm">
+                            info@dsvanguard.com
+                        </p>
+
+                        <p class="text-blue-500 font-bold mt-3">
+                            +1 832 723 5258
+                        </p>
+
+                    </div>
+
+                </div>
+
             </div>
-            <div class="flex flex-col md:flex-row gap-8 text-blue-200 uppercase tracking-[0.2em] text-[11px] font-bold">
-                <a href="mailto:sales@dsvanguard.com" class="hover:text-white transition"><i class="fas fa-envelope mr-2 text-blue-500"></i> sales@dsvanguard.com</a>
-                <a href="https://api.whatsapp.com/send?phone=18327235258" class="hover:text-white transition"><i class="fab fa-whatsapp mr-2 text-blue-500"></i> +1 832 723 5258</a>
-                <span><i class="fas fa-industry mr-2 text-blue-500"></i> Tacoma, WA</span>
+
+            <!-- GOOGLE MAP -->
+
+            <div class="overflow-hidden rounded border border-white/10 h-72">
+
+                <iframe
+                    src="https://www.google.com/maps?q=Tacoma,Washington&output=embed"
+                    width="100%"
+                    height="100%"
+                    style="border:0;"
+                    allowfullscreen=""
+                    loading="lazy">
+                </iframe>
+
             </div>
+
         </div>
-        <div class="mt-16 text-center text-white/20 text-[9px] tracking-[0.4em] font-bold uppercase">
-            &copy; Vanguard Distribution Supply. Global ASME Certified Partner.
+
+        <div class="border-t border-white/10 mt-20 pt-8 text-center text-[10px] uppercase tracking-[0.3em] text-gray-500">
+
+            Global Engineering Partners • ASME Section VIII Div 1 • 2026
+
         </div>
+
     </footer>
 
+    <!-- SCRIPT -->
+
     <script>
-        let currentLang = 'en';
+
+        let cart = [];
+        let lang = 'en';
+
         function toggleLang() {
+
+            lang = lang === 'en' ? 'es' : 'en';
+
             const en = document.querySelectorAll('.lang-en');
             const es = document.querySelectorAll('.lang-es');
-            const btn = document.getElementById('btnText');
-            if (currentLang === 'en') {
+
+            const btn = document.getElementById('langBtnText');
+
+            if (lang === 'es') {
+
                 en.forEach(e => e.style.display = 'none');
                 es.forEach(e => e.style.display = 'block');
-                btn.innerText = "English";
-                currentLang = 'es';
+
+                btn.innerText = 'ENGLISH VERSION';
+
             } else {
+
                 en.forEach(e => e.style.display = 'block');
                 es.forEach(e => e.style.display = 'none');
-                btn.innerText = "Español";
-                currentLang = 'en';
+
+                btn.innerText = 'SE HABLA ESPAÑOL';
             }
         }
+
+        function showToast(message) {
+
+            const toast = document.createElement('div');
+
+            toast.className = 'toast';
+
+            toast.innerText = message;
+
+            document.body.appendChild(toast);
+
+            setTimeout(() => {
+                toast.remove();
+            }, 2500);
+        }
+
+        function addToCart(item) {
+
+            cart.push(item);
+
+            document.getElementById('cart-count').innerText = cart.length;
+
+            updateCartUI();
+
+            showToast(`${item} added successfully`);
+        }
+
+        function removeItem(index) {
+
+            cart.splice(index, 1);
+
+            document.getElementById('cart-count').innerText = cart.length;
+
+            updateCartUI();
+        }
+
+        function updateCartUI() {
+
+            const container = document.getElementById('cart-items');
+
+            if (cart.length === 0) {
+
+                container.innerHTML = `
+                    <p class="text-gray-400 italic text-center py-10">
+                        Your list is empty.
+                    </p>
+                `;
+
+                return;
+            }
+
+            container.innerHTML = cart.map((item, index) => `
+
+                <div class="flex justify-between items-center bg-slate-50 border-l-4 border-blue-600 p-4 rounded">
+
+                    <span class="uppercase text-xs tracking-widest font-bold text-slate-900">
+                        ${item}
+                    </span>
+
+                    <button onclick="removeItem(${index})">
+
+                        <i class="fas fa-trash text-red-500 hover:text-slate-900 transition"></i>
+
+                    </button>
+
+                </div>
+
+            `).join('');
+        }
+
+        function toggleCart() {
+
+            document.getElementById('cart-modal')
+                .classList.toggle('hidden');
+
+            document.getElementById('cart-modal')
+                .classList.toggle('flex');
+        }
+
+        function sendToWhatsApp() {
+
+            if (cart.length === 0) {
+
+                showToast("Select at least one product");
+
+                return;
+            }
+
+            const text = encodeURIComponent(
+
+                `VANGUARD SUPPLY QUOTE REQUEST:
+
+Products of interest:
+
+${cart.map(i => '• ' + i).join('\n')}
+
+Please contact me with pricing and availability.`
+
+            );
+
+            window.open(
+                `https://wa.me/18327235258?text=${text}`,
+                '_blank'
+            );
+        }
+
     </script>
+
 </body>
 </html>
